@@ -152,12 +152,9 @@ Page({
           dailyExpense: dailyExpense
         }
       }).then(res => {
-        // wx.redirectTo({
-        //   url: '/pages/index/index?showAddSuccess=true',
-        // })
         wx.navigateBack({
           delta: 1,
-          success: function () {
+          success: function (res) {
             let pages = getCurrentPages();
             pages[0].showAddSuccess();
           }
@@ -227,6 +224,7 @@ Page({
 
   //提交信息
   addDaily_Incomes() {
+    console.log()
     // 插入记录
     let that = this;
     var dailyIncomes = {
@@ -246,15 +244,11 @@ Page({
           dailyIncomes: dailyIncomes
         }
       }).then(res => {
-        // wx.redirectTo({
-        //   url: '/pages/index/index?showAddSuccess=true',
-        // })
         wx.navigateBack({
-          delta: 0,
+          delta: 1,
           success: function (res) {
-            var page = getCurrentPages().pop();
-            if (page == undefined || page == null) return;
-            page.showAddSuccess();
+            let pages = getCurrentPages();
+            pages[0].showAddSuccess();
           }
         })
       })
@@ -268,6 +262,14 @@ Page({
   },
 
   //========================================================================
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -292,15 +294,15 @@ Page({
       dailyIncomesTime: time
     })
   },
-  //日期格式转为日期标准字符串：2020-12-20
-  formatDate(e) {
-    var time = e;
-    if (time.month < 10) {
-      time.month = "0" + time.month;
+    //日期格式转为日期标准字符串：2020-12-20
+    formatDate(e) {
+      var time = e;
+      if (time.month < 10) {
+        time.month = "0" + time.month;
+      }
+      if (time.date < 10) {
+        time.date = "0" + time.date
+      }
+      return time;
     }
-    if (time.date < 10) {
-      time.date = "0" + time.date
-    }
-    return time;
-  }
 })

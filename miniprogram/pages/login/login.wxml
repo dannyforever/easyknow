@@ -1,9 +1,12 @@
 <!--index.wxml-->
 <view class="container">
+    <view class="login-image">
+        <image src="/images/increase_icon_add.png" />
+    </view>
     <view class="userinfo">
+        <view class="hint">授权后才可正常使用</view>
         <block wx:if="{{!hasUserInfo && canIUse}}">
-            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
-            <view class="hint">授权后才可正常使用</view>
+            <button class="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
         </block>
     </view>
 </view>

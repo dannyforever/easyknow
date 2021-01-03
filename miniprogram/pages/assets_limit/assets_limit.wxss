@@ -1,1 +1,85 @@
-/* pages/assets_limit/assets_limit.wxss */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+}
+
+.navigator {
+  width: 100%;
+  height: 92px;
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+}
+
+.block-title {
+  width: 100%;
+  height: 50px;
+  background-color: #f2f8fd;
+}
+
+.title {
+  height: 42px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 5%;
+  font-size: 40rpx;
+  background-color: #f2f8fd;
+}
+
+.title image {
+  height: 55rpx;
+  width: 55rpx;
+  padding: 2%;
+}
+
+.title text {
+  padding: 1% 29%;
+}
+
+.assets {
+  margin-top: 92px;
+}
+
+.assets,
+.limit {
+  width: 90%;
+  height: 90rpx;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  line-height: 95rpx;
+}
+
+.assets-l,
+.limit-l {
+  width: 30%;
+}
+
+.assets-r,
+.limit-r {
+  width: 80%;
+  height: 93rpx;
+  line-height: 95rpx;
+  color: grey;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.678);
+}
+
+.submit {
+  width: 90%;
+  height: 93rpx;
+  margin-top: 2%;
+  background-color: #f2f8fd;
+  border-radius: 25rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit::after {
+  border-radius: 25rpx;
+  border: 0;
+}

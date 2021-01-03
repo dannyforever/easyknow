@@ -9,7 +9,7 @@
   </view>
   <view class="menu-list">
     <!-- 1：设定资产 -->
-    <view class="list-addfixed">
+    <view class="property-manage">
       <text bindtap="bindAssets">资产管理</text>
     </view>
     <!-- 2：查看固定收支栏 -->

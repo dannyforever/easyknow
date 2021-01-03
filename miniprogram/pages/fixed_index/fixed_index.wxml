@@ -17,14 +17,14 @@
     <swiper-item>
       <view>
         <!-- 固定支出账目的渲染 -->
-        <view class="specialex" wx:for="{{fixed_expenses}}">
-          <!-- 滑动修改/删除 -->
+        <view class="specialex" wx:for="{{fixed_expenses}}" wx:key="key">
           <view class="info" bindtap="expenseAlter" data-id="{{index}}">
             <!-- 类型图标 -->
             <image src="/images/add_daily/expenses/{{item.fixedExpensesKind}}.png" />
             <text class="name">{{item.fixedExpensesName}}</text>
-            <view class="date">{{item.fixedExpensesDate}}</view>
-            <text class="money">-{{item.fixedExpensesAmount}}</text>
+              <!-- <view class="month">{{item.fixedExpensesMonth}}月</view> -->
+              <view class="date">{{item.fixedExpensesDate}}日</view>
+            <text class="money">{{item.fixedExpensesAmount}}</text>
           </view>
         </view>
       </view>
@@ -33,14 +33,14 @@
     <swiper-item>
       <view>
         <!-- 固定收入账目的渲染 -->
-        <view class="specialin" wx:for="{{fixed_incomes}}">
-          <!-- 滑动修改/删除 -->
+        <view class="specialin" wx:for="{{fixed_incomes}}" wx:key="key">
           <view class="info" bindtap="incomeAlter" data-id="{{index}}">
             <!-- 类型图标 -->
             <image src="/images/add_daily/expenses/{{item.fixedIncomesKind}}.png" />
             <text class="name">{{item.fixedIncomesName}}</text>
-            <view class="date">{{item.fixedIncomesDate}}</view>
-            <text class="money">-{{item.fixedIncomesAmount}}</text>
+            <!-- <view class="month">{{item.fixedIncomesMonth}}月</view> -->
+            <view class="date">{{item.fixedIncomesDate}}日</view>
+            <text class="money">{{item.fixedIncomesAmount}}</text>
           </view>
         </view>
       </view>

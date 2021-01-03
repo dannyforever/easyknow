@@ -137,7 +137,6 @@ Page({
     })
   },
   deleteDaily(e) {
-    // console.log(e)
     let daily_time = this.data.daily_time
     wx.cloud.callFunction({
       name: 'index',
@@ -182,6 +181,7 @@ Page({
         date: date.date
       })
       .then()
+    this.onLoad()
   },
   /**
    * 数据删除成功提示
@@ -263,9 +263,18 @@ Page({
       }
     })
   },
+
   isEmptyObject(obj) {
+    // console.log('obj',obj)
     for (var n in obj) {
-      return false
+      // console.log('n',n)
+      for (var m in obj[n]) {
+        // console.log('m',m)
+        for (var o in obj[n][m]) {
+          // console.log('o',o)
+          return false
+        }
+      }
     }
     return true;
   },
@@ -273,11 +282,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // if(options){
-    //   if(options.showAddSuccess){
-    //     this.showAddSuccess()
-    //   }
-    // }
     var d = new Date();
     var e = {
       year: d.getFullYear(),

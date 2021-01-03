@@ -5,7 +5,7 @@
   font-size: 17px;
 }
 
-.navigator{
+.navigator {
   width: 100%;
   height: 92px;
   position: fixed;
@@ -50,18 +50,18 @@
   font-size: 40rpx;
   color: #777777;
 }
- 
- .on{
+
+.on {
   color: #1296db;
   border-bottom: 5rpx solid #1296db;
- }
- 
-.swiper-box{
+}
+
+.swiper-box {
   display: block;
   height: 530px;
   width: 100%;
   overflow: hidden;
- }
+}
 
 .acc-icon {
   background-color: #f2f8fd;
@@ -74,37 +74,49 @@
 
 .icon-text {
   width: 20%;
-  margin: 2% 0;
+  margin: 0;
 }
 
 .acc-images {
-  width: 90%;
+  width: 80%;
+}
+
+.images-form {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.images-form{
-  width: 100%;
-  height: 120rpx;
+.images-form-1,
+.images-form-2 {
   display: flex;
   flex-direction: row;
-  margin: 2%;
 }
 
-.images-part{
-  margin: 2% 3%;
+.images-part-1 {
+  margin: 0 15% 4% 0;
+  width: 75rpx;
+  height: 75rpx;
 }
 
-.images-form image {
-  width: 50rpx;
-  height: 50rpx;
+.images-part-2 {
+  margin: 0 15% 4% 0;
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.images-part-1 image,
+.images-part-2 image {
+  width: 75rpx;
+  height: 75rpx;
 }
 
 .acc-name,
 .acc-money,
 .acc-payway {
   width: 90%;
-  height: 93rpx;
+  height: 90rpx;
   padding: 2% 5%;
   display: flex;
   flex-direction: row;
@@ -114,50 +126,41 @@
 .name-l,
 .data-l,
 .money-l,
-.remarks-l{
+.remarks-l {
   width: 20%;
 }
 
-.payway-l{
+.payway-l {
   width: 30%;
 }
 
 .name-r,
 .data-r,
 .money-r,
-.remarks-r{
+.remarks-r {
   width: 80%;
-  height: 93rpx;
+  height: 90rpx;
   line-height: 95rpx;
   color: grey;
 }
 
-.data-r image{
+.data-r image {
   width: 50rpx;
   height: 50rpx;
 }
 
-.payway-r{
+.payway-r {
   width: 70%;
-  height: 93rpx;
+  height: 90rpx;
   line-height: 95rpx;
   color: grey;
 }
 
-.acc-month{
-  background-color: #f2f8fd;
-  width: 90%;
-  height: 93rpx;
-  padding: 2% 5%;
-  display: flex;
-  flex-direction: row;
-  line-height: 95rpx;
-}
-
+.acc-month,
 .acc-date {
   background-color: #f2f8fd;
   width: 90%;
-  height: 93rpx;
+  height: 90rpx;
   padding: 2% 5%;
   display: flex;
   flex-direction: row;
@@ -167,32 +170,73 @@
 .acc-remarks {
   background-color: #f2f8fd;
   width: 90%;
-  height: 93rpx;
+  height: 90rpx;
   padding: 2% 5%;
   display: flex;
   flex-direction: row;
   line-height: 95rpx;
 }
 
+.checkbox-group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  margin: 4% 20%;
+}
+
+.checkbox-part {
+  margin: 0 4%;
+}
+
+.checkbox-part image {
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.radio-group{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1% 0;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 2%;
+}
+
+.radio-part {
+  margin: 0 2%;
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.radio-part image {
+  width: 75rpx;
+  height: 75rpx;
+}
+
 .submit {
   width: 90%;
-  height: 93rpx;
+  height: 90rpx;
   margin-top: 2%;
   background-color: #f2f8fd;
-  border-radius: 98rpx;
+  border-radius: 25rpx;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.subImg {
-  margin-right: 8rpx;
-  width: 50rpx;
-  height: 50rpx;
-}
-
 .submit::after {
-  border-radius: 98rpx;
-  /* border: 0; */
+  border-radius: 25rpx;
+  border: 0;
 }

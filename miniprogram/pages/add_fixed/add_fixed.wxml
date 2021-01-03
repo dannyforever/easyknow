@@ -21,8 +21,17 @@
           <text class="icon-text">类型：</text>
           <view class="acc-images">
             <view class="images-form">
-              <view class="images-part" wx:for="{{7}}" wx:key="key" data-id="{{index}}" bindtap="chooseExpensesIcon">
-                <image src="/images/add_daily/expenses/{{index}}.png" />
+              <view class="images-form-1">
+                <view class="images-part-1" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index<4}}"
+                  bindtap="chooseExpensesIcon">
+                  <image src="/images/add_daily/expenses/{{index}}.png" />
+                </view>
+              </view>
+              <view class="images-form-2">
+                <view class="images-part-2" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index>3}}"
+                  bindtap="chooseExpensesIcon">
+                  <image src="/images/add_daily/expenses/{{index}}.png" />
+                </view>
               </view>
             </view>
           </view>
@@ -36,13 +45,34 @@
         <view class="acc-month">
           <text class="data-l">月份：</text>
           <view class="data-r">
-            <van-cell title="{{selectedMonthExpenses?selectedMonthExpenses:'请选择月份'}}" is-link bind:click="showPopupMonthExpenses" />
-            <van-popup show="{{showMonthExpenses}}" position="bottom" custom-style="height: 40%;" bind:close="onCloseMonthExpenses">
+            <van-cell title="{{selectedMonthExpenses?selectedMonthExpenses:'请选择月份'}}" is-link
+              bind:click="showPopupMonthExpenses" />
+            <van-popup show="{{showMonthExpenses}}" position="bottom" custom-style="height: 40%;"
+              bind:close="onCloseMonthExpenses">
               <van-checkbox-group value="{{selectedMonthExpenses}}" bind:change="onChangeMonthExpenses">
-                <van-checkbox use-icon-slot wx:for="{{12}}" wx:key="key" name="{{index+1}}">
-                  <image slot="icon"
-                    src="{{numListMonthExpenses[index+1]?activeIconsMonth[index+1]:inactiveIconsMonth[index+1]}}" />
-                </van-checkbox>
+                <view class="checkbox-group">
+                  <view class="checkbox">
+                    <van-checkbox class="checkbox-part" use-icon-slot wx:for="{{12}}" wx:key="key" name="{{index+1}}"
+                      wx:if="{{index<4}}">
+                      <image slot="icon"
+                        src="{{numListMonthExpenses[index+1]?activeIconsMonth[index+1]:inactiveIconsMonth[index+1]}}" />
+                    </van-checkbox>
+                  </view>
+                  <view class="checkbox">
+                    <van-checkbox class="checkbox-part" use-icon-slot wx:for="{{12}}" wx:key="key" name="{{index+1}}"
+                      wx:if="{{3<index & index<8}}">
+                      <image slot="icon"
+                        src="{{numListMonthExpenses[index+1]?activeIconsMonth[index+1]:inactiveIconsMonth[index+1]}}" />
+                    </van-checkbox>
+                  </view>
+                  <view class="checkbox">
+                    <van-checkbox class="checkbox-part" use-icon-slot wx:for="{{12}}" wx:key="key" name="{{index+1}}"
+                      wx:if="{{7<index}}">
+                      <image slot="icon"
+                        src="{{numListMonthExpenses[index+1]?activeIconsMonth[index+1]:inactiveIconsMonth[index+1]}}" />
+                    </van-checkbox>
+                  </view>
+                </view>
               </van-checkbox-group>
             </van-popup>
           </view>
@@ -51,13 +81,46 @@
         <view class="acc-date">
           <text class="data-l">日期：</text>
           <view class="data-r">
-            <van-cell title="{{selectedDateExpenses?selectedDateExpenses:'请选择日期'}}" is-link bind:click="showPopupDateExpenses" />
-            <van-popup show="{{showDateExpenses}}" position="bottom" custom-style="height: 40%;" bind:close="onCloseDateExpenses">
-              <van-radio-group value="{{ selectedDateExpenses }}" bind:change="onChangeDateExpenses">
-                <van-radio use-icon-slot value="{{ selectedDateExpenses }}" wx:for="{{31}}" wx:key="key" name="{{index+1}}">
-                  <image slot="icon"
-                    src="{{numListDateExpenses[index+1]?activeIconsDate[index+1]:inactiveIconsDate[index+1]}}" />
-                </van-radio>
+            <van-cell title="{{selectedDateExpenses?selectedDateExpenses:'请选择日期'}}" is-link
+              bind:click="showPopupDateExpenses" />
+            <van-popup show="{{showDateExpenses}}" position="bottom" custom-style="height: 50%;"
+              bind:close="onCloseDateExpenses">
+              <van-radio-group class="radio-group" value="{{ selectedDateExpenses }}" bind:change="onChangeDateExpenses">
+                <view class="radio">
+                  <van-radio class="radio-part" use-icon-slot value="{{ selectedDateExpenses }}" wx:for="{{31}}" wx:key="key"
+                    name="{{index+1}}" wx:if="{{index<7}}">
+                    <image slot="icon"
+                      src="{{numListDateExpenses[index+1]?activeIconsDate[index+1]:inactiveIconsDate[index+1]}}" />
+                  </van-radio>
+                </view>
+                <view class="radio">
+                  <van-radio class="radio-part" use-icon-slot value="{{ selectedDateExpenses }}" wx:for="{{31}}" wx:key="key"
+                    name="{{index+1}}" wx:if="{{6<index & index<14}}">
+                    <image slot="icon"
+                      src="{{numListDateExpenses[index+1]?activeIconsDate[index+1]:inactiveIconsDate[index+1]}}" />
+                  </van-radio>
+                </view>
+                <view class="radio">
+                  <van-radio class="radio-part" use-icon-slot value="{{ selectedDateExpenses }}" wx:for="{{31}}" wx:key="key"
+                    name="{{index+1}}" wx:if="{{13<index & index<21}}">
+                    <image slot="icon"
+                      src="{{numListDateExpenses[index+1]?activeIconsDate[index+1]:inactiveIconsDate[index+1]}}" />
+                  </van-radio>
+                </view>
+                <view class="radio">
+                  <van-radio class="radio-part" use-icon-slot value="{{ selectedDateExpenses }}" wx:for="{{31}}" wx:key="key"
+                    name="{{index+1}}" wx:if="{{20<index & index<28}}">
+                    <image slot="icon"
+                      src="{{numListDateExpenses[index+1]?activeIconsDate[index+1]:inactiveIconsDate[index+1]}}" />
+                  </van-radio>
+                </view>
+                <view class="radio">
+                  <van-radio class="radio-part" use-icon-slot value="{{ selectedDateExpenses }}" wx:for="{{31}}" wx:key="key"
+                    name="{{index+1}}" wx:if="{{27<index}}">
+                    <image slot="icon"
+                      src="{{numListDateExpenses[index+1]?activeIconsDate[index+1]:inactiveIconsDate[index+1]}}" />
+                  </van-radio>
+                </view>
               </van-radio-group>
             </van-popup>
           </view>
@@ -84,10 +147,7 @@
           </view>
         </view>
         <!-- 9：确认提交按钮 -->
-        <button bindtap="addFixed_Expense">
-          <!-- <image class='subImg' src='/images/星标.png'></image> -->
-          <view>确认</view>
-        </button>
+        <button class="submit" bindtap="addFixed_Expense">确认</button>
       </view>
     </swiper-item>
     <!-- 收入模块 -->
@@ -98,8 +158,17 @@
           <text class="icon-text">类型：</text>
           <view class="acc-images">
             <view class="images-form">
-              <view class="images-part" wx:for="{{7}}" wx:key="key" data-id="{{index}}" bindtap="chooseIncomesIcon">
-                <image src="/images/add_daily/incomes/{{index}}.png" />
+              <view class="images-form-1">
+                <view class="images-part-1" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index<4}}"
+                  bindtap="chooseIncomesIcon">
+                  <image src="/images/add_daily/incomes/{{index}}.png" />
+                </view>
+              </view>
+              <view class="images-form-2">
+                <view class="images-part-2" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index>3}}"
+                  bindtap="chooseIncomesIcon">
+                  <image src="/images/add_daily/incomes/{{index}}.png" />
+                </view>
               </view>
             </view>
           </view>
@@ -109,12 +178,14 @@
           <text class="name-l">名称：</text>
           <input class="name-r" value="{{fixedIncomesName}}" type="text" bindchange="bindIncomesNameChange" />
         </view>
-         <!-- 4：月份设置栏 -->
-         <view class="acc-month">
+        <!-- 4：月份设置栏 -->
+        <view class="acc-month">
           <text class="data-l">月份：</text>
           <view class="data-r">
-            <van-cell title="{{selectedMonthIncomes?selectedMonthIncomes:'请选择月份'}}" is-link bind:click="showPopupMonthIncomes" />
-            <van-popup show="{{showMonthIncomes}}" position="bottom" custom-style="height: 40%;" bind:close="onCloseMonthIncomes">
+            <van-cell title="{{selectedMonthIncomes?selectedMonthIncomes:'请选择月份'}}" is-link
+              bind:click="showPopupMonthIncomes" />
+            <van-popup show="{{showMonthIncomes}}" position="bottom" custom-style="height: 40%;"
+              bind:close="onCloseMonthIncomes">
               <van-checkbox-group value="{{selectedMonthIncomes}}" bind:change="onChangeMonthIncomes">
                 <van-checkbox use-icon-slot wx:for="{{12}}" wx:key="key" name="{{index+1}}">
                   <image slot="icon"
@@ -128,10 +199,13 @@
         <view class="acc-date">
           <text class="data-l">日期：</text>
           <view class="data-r">
-            <van-cell title="{{selectedDateIncomes?selectedDateIncomes:'请选择日期'}}" is-link bind:click="showPopupDateIncomes" />
-            <van-popup show="{{showDateIncomes}}" position="bottom" custom-style="height: 40%;" bind:close="onCloseDateIncomes">
+            <van-cell title="{{selectedDateIncomes?selectedDateIncomes:'请选择日期'}}" is-link
+              bind:click="showPopupDateIncomes" />
+            <van-popup show="{{showDateIncomes}}" position="bottom" custom-style="height: 40%;"
+              bind:close="onCloseDateIncomes">
               <van-radio-group value="{{ selectedDateIncomes }}" bind:change="onChangeDateIncomes">
-                <van-radio use-icon-slot value="{{ selectedDateIncomes }}" wx:for="{{31}}" wx:key="key" name="{{index+1}}">
+                <van-radio use-icon-slot value="{{ selectedDateIncomes }}" wx:for="{{31}}" wx:key="key"
+                  name="{{index+1}}">
                   <image slot="icon"
                     src="{{numListDateIncomes[index+1]?activeIconsDate[index+1]:inactiveIconsDate[index+1]}}" />
                 </van-radio>
@@ -161,9 +235,7 @@
           </view>
         </view>
         <!-- 9：确认提交按钮 -->
-        <button bindtap="addFixed_Incomes">
-          <view>确认</view>
-        </button>
+        <button class="submit" bindtap="addFixed_Incomes">确认</button>
       </view>
     </swiper-item>
   </swiper>

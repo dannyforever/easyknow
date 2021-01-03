@@ -412,9 +412,8 @@ Page({
           wx.navigateBack({
             delta: 1,
             success: function (res) {
-              let page = getCurrentPages().pop();
-              if (page == undefined || page == null) return;
-              page.showAlterSuccess();
+              let pages = getCurrentPages();
+              pages[2].showAlterSuccess();
             }
           })
         })
@@ -593,9 +592,8 @@ Page({
           wx.navigateBack({
             delta: 1,
             success: function (res) {
-              let page = getCurrentPages().pop();
-              if (page == undefined || page == null) return;
-              page.showAlterSuccess();
+              let pages = getCurrentPages();
+              pages[2].showAlterSuccess();
             }
           })
         })
@@ -646,7 +644,6 @@ Page({
     })
   },
   deleteFixed(e) {
-    console.log(e)
     wx.cloud.callFunction({
       name: 'alter_fixed',
       data: {
@@ -658,9 +655,8 @@ Page({
         wx.navigateBack({
           delta: 1,
           success: function (res) {
-            let page = getCurrentPages().pop();
-            if (page == undefined || page == null) return;
-            page.showDeleteSuccess();
+            let pages = getCurrentPages();
+            pages[2].showDeleteSuccess();
           }
         })
       },
@@ -676,7 +672,6 @@ Page({
   onLoad: function (options) {
     var object = JSON.parse(options.object)
     let that = this;
-    console.log(object)
     this.setData({
       isExpense: object.isExpense
     })

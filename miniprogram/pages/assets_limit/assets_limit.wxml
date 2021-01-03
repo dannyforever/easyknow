@@ -5,23 +5,15 @@
     <text>菜单</text>
   </view>
 </view>
-<view >
+<view>
   <view class="assets">
-    <view>总资产</view>
-    <view>
-      <input value="{{assets}}" type="number" bindinput="bindAssetsChange" />
-    </view>
-    <view>
-      <button bindtap="updateAssetsTap">更新总资产</button>
-    </view>
+    <text class="assets-l">总资产：</text>
+    <input class="assets-r" value="{{assets}}" type="number" bindinput="bindAssetsChange" />
   </view>
+        <button class="submit" bindtap="updateAssetsTap">更新总资产</button>
   <view class="limit">
-    <view>每日限额</view>
-    <view>
-      <input value="{{limit}}" type="number" bindinput="bindLimitChange" />
-    </view>
-    <view>
-      <button bindtap="updateLimitTap">更新每日限额</button>
-    </view>
+    <text class="limit-l">每日限额：</text>
+    <input class="limit-r" value="{{limit}}" type="number" bindinput="bindLimitChange" />
   </view>
+  <button class="submit" bindtap="updateLimitTap">更新每日限额</button>
 </view>

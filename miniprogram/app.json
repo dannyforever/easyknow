@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/fixed_index/fixed_index",
-    "pages/add_daily/add_daily",
     "pages/add_fixed/add_fixed",
+    "pages/add_daily/add_daily",
+    "pages/fixed_index/fixed_index",
     "pages/alter_daily/alter_daily",
     "pages/alter_fixed/alter_fixed",
     "pages/menu/menu",

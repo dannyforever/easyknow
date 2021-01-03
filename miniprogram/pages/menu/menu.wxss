@@ -44,10 +44,20 @@
 }
 
 .menu-list text{
-  margin-top: auto;
+  margin: auto;
+}
+
+.property-manage{
+  width: 90%;
+  height: 93rpx;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  line-height: 95rpx;
 }
 
 .list-addfixed {
+  background-color: #f2f8fd;
   width: 90%;
   height: 93rpx;
   padding: 2% 5%;
@@ -57,7 +67,6 @@
 }
 
 .set-addfixed {
-  background-color: #f2f8fd;
   width: 90%;
   height: 93rpx;
   padding: 2% 5%;
@@ -65,3 +74,4 @@
   flex-direction: row;
   line-height: 95rpx;
 }
+

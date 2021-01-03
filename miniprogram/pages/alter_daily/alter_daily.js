@@ -237,9 +237,8 @@
          wx.navigateBack({
            delta: 1,
            success: function (res) {
-             let page = getCurrentPages().pop();
-             if (page == undefined || page == null) return;
-             page.showAlterSuccess();
+            let pages = getCurrentPages();
+             pages[0].showAlterSuccess();
            }
          })
        })

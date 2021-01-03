@@ -12,9 +12,8 @@ Page({
     wx.navigateBack({
       delta: 0,
       success: function (res) {
-        let page = getCurrentPages().pop();
-        if (page == undefined || page == null) return;
-        page.onLoad();
+        let pages = getCurrentPages();
+        pages[0].onLoad();
       }
     })
   },

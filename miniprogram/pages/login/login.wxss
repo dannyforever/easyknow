@@ -1,1 +1,43 @@
-/* pages/login/login.wxss */
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+}
+
+.login-image{
+  margin-top: 250rpx;
+  width: 100%;
+  height: 350rpx;
+}
+
+.login-image image{
+  width: 300rpx;
+  height: 300rpx;
+  padding: 0 30%;
+}
+
+.userinfo{
+  width: 100%;
+  height: 650rpx;
+}
+
+.hint{
+  margin-top: 20%;
+  padding: 5% 29%;
+}
+
+.login{
+  margin-top: 20%;
+  width: 350rpx;
+  height: 93rpx;
+  background-color: #f2f8fd;
+  border-radius: 98rpx;
+
+}
+
+.login::after {
+  border-radius: 98rpx;
+  /* border: 0; */
+}

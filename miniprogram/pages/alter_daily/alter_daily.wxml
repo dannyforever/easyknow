@@ -15,8 +15,15 @@
           <text class="icon-text">类型：</text>
           <view class="acc-images">
             <view class="images-form">
-              <view class="images-part" wx:for="{{7}}" data-id="{{index}}" bindtap="chooseExpensesIcon">
-                <image src="/images/add_daily/expenses/{{index}}.png" />
+              <view class="images-form-1">
+                <view class="images-part-1" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index<4}}" bindtap="chooseExpensesIcon">
+                  <image src="/images/add_daily/expenses/{{index}}.png" />
+                </view>
+              </view>
+              <view class="images-form-2">
+                <view class="images-part-2" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index>3}}" bindtap="chooseExpensesIcon">
+                  <image src="/images/add_daily/expenses/{{index}}.png" />
+                </view>
               </view>
             </view>
           </view>
@@ -57,9 +64,7 @@
           </view>
         </view>
         <!-- 8：确认提交按钮 -->
-        <button bindtap="alterDaily_Expense">
-          <view>确认</view>
-        </button>
+        <button class="submit" bindtap="alterDaily_Expense">确认修改</button>
       </view>
     </view>
     <view wx:if="{{!isExpense}}">
@@ -69,8 +74,15 @@
           <text class="icon-text">类型：</text>
           <view class="acc-images">
             <view class="images-form">
-              <view class="images-part" wx:for="{{7}}" data-id="{{index}}" bindtap="chooseIncomesIcon">
-                <image src="/images/add_daily/incomes/{{index}}.png" />
+              <view class="images-form-1">
+                <view class="images-part-1" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index<4}}" bindtap="chooseIncomesIcon">
+                  <image src="/images/add_daily/incomes/{{index}}.png" />
+                </view>
+              </view>
+              <view class="images-form-2">
+                <view class="images-part-2" wx:for="{{7}}" wx:key="key" data-id="{{index}}" wx:if="{{index>3}}" bindtap="chooseIncomesIcon">
+                  <image src="/images/add_daily/incomes/{{index}}.png" />
+                </view>
               </view>
             </view>
           </view>
@@ -111,10 +123,7 @@
           </view>
         </view>
         <!-- 8：确认提交按钮 -->
-        <button bindtap="alterDaily_Incomes">
-          <!-- <image class='subImg' src='/images/星标.png'></image> -->
-          <view>确认</view>
-        </button>
+        <button class="submit" bindtap="alterDaily_Incomes">确认修改</button>
       </view>
     </view>
   </view>

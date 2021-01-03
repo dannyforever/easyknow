@@ -45,7 +45,7 @@
 
 .acc-icon {
   width: 90%;
-  height: 280rpx;
+  height: 180rpx;
   padding: 2% 5%;
   display: flex;
   flex-direction: row;
@@ -53,30 +53,42 @@
 
 .icon-text {
   width: 20%;
-  margin: 2% 0;
+  margin: 0;
 }
 
 .acc-images {
-  width: 90%;
+  width: 80%;
+}
+
+.images-form{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.images-form {
-  width: 100%;
-  height: 120rpx;
+.images-form-1,
+.images-form-2 {
   display: flex;
   flex-direction: row;
-  margin: 2%;
 }
 
-.images-part {
-  margin: 2% 3%;
+.images-part-1{
+  margin: 0 15% 4% 0;
+  width: 75rpx;
+  height: 75rpx;
 }
 
-.images-form image {
-  width: 50rpx;
-  height: 50rpx;
+.images-part-2{
+  margin: 0 15% 4% 0;
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.images-part-1 image,
+.images-part-2 image {
+  width: 75rpx;
+  height: 75rpx;
 }
 
 .acc-name,
@@ -84,7 +96,7 @@
 .acc-payway {
   background-color: #f2f8fd;
   width: 90%;
-  height: 93rpx;
+  height: 90rpx;
   padding: 2% 5%;
   display: flex;
   flex-direction: row;
@@ -108,14 +120,14 @@
 .money-r,
 .remarks-r {
   width: 80%;
-  height: 93rpx;
+  height: 90rpx;
   line-height: 95rpx;
   color: grey;
 }
 
 .payway-r {
   width: 70%;
-  height: 93rpx;
+  height: 90rpx;
   line-height: 95rpx;
   color: grey;
 }
@@ -124,7 +136,7 @@
 .acc-remarks
  {
   width: 90%;
-  height: 93rpx;
+  height: 90rpx;
   padding: 2% 5%;
   display: flex;
   flex-direction: row;
@@ -133,23 +145,17 @@
 
 .submit {
   width: 90%;
-  height: 93rpx;
+  height: 90rpx;
   margin-top: 5%;
   background-color: #f2f8fd;
-  border-radius: 98rpx;
+  border-radius: 25rpx;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.subImg {
-  margin-right: 8rpx;
-  width: 50rpx;
-  height: 50rpx;
-}
-
 .submit::after {
-  border-radius: 98rpx;
-  /* border: 0; */
+  border-radius: 25rpx;
+  border: 0;
 }
