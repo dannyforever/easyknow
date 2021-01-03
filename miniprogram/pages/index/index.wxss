@@ -1,0 +1,233 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigator{
+  width: 100%;
+  height: 92px;
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+}
+
+.block-title {
+  width: 100%;
+  height: 50px;
+  background-color: #f2f8fd;
+}
+
+/* 头部 */
+.title {
+  height: 42px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 5%;
+  font-size: 40rpx;
+  background-color: #f2f8fd;
+}
+
+.title image {
+  height: 55rpx;
+  width: 55rpx;
+  padding: 2%;
+}
+
+.title text {
+  padding: 1% 25%;
+}
+
+/* .shade{
+  width: 30%;
+  height: 902rpx;
+  position: fixed;
+  top: 92px;
+  left: 70%;
+  overflow: hidden;
+  background: gray;
+} */
+
+/* 日历 */
+.calender {
+  height: 520rpx;
+  width: 100%;
+  margin-top: 92px;
+}
+
+.date-style{
+  color: #fff;
+  background-color: #1296db;
+}
+
+/* 详情 */
+.de-mv {
+  width: 100%;
+  height: 550px;
+}
+
+.de-list {
+  width: 100%;
+  height: 700px;
+}
+
+.detail {
+  background-color: #f2f8fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 2rpx solid #fff9ec;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+/* 下拉图标 */
+.getdownbtn {
+  height: 50rpx;
+  width: 50rpx;
+  margin: 0 auto;
+}
+
+/* 收入支出实时 */
+.total {
+  width: 90%;
+  margin: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 50rpx;
+}
+
+.income,
+.expenditure,
+.realtime {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* 今日限额 */
+.limit {
+  text-align: right;
+  width: 90%;
+  margin: 2% 5%;
+  color: black;
+}
+
+/* 滑动修改删除样式 */
+.se-mv {
+  width: 100%;
+  height: 135rpx;
+}
+
+.se_list {
+  width: 120%;
+  height: 135rpx;
+}
+
+.se-box {
+  display: flex;
+  justify-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  height: 135rpx;
+}
+
+/* 每条信息样式 */
+.info {
+  width: 83%;
+  height: 93rpx;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 95rpx;
+  font-size: 17px;
+}
+
+/* 删除选项 */
+.delete {
+  width: 11%;
+  height: 93rpx;
+  padding: 2% 2% 2% 4%;
+  color: white;
+  background-color: red;
+  line-height: 100rpx;
+}
+
+/* 预设支出样式 */
+.specialex {
+  background-color: white;
+  width: 100%;
+  height: 135rpx;
+  /* border-top: 2rpx solid #1296db; */
+}
+
+/* 预设收入样式 */
+.specialin {
+  background-color: #f2f8fd;
+  width: 100%;
+  height: 135rpx;
+  /* border-top: 2rpx solid #1296db; */
+}
+
+/* 普通账目样式 */
+.commonitem {
+  background-color: white;
+  width: 100%;
+  height: 135rpx;
+  /* border-top: 2rpx solid #1296db; */
+}
+
+/* 统一账目样式 */
+.specialex image,
+.specialin image,
+.commonitem image {
+  padding: 0 6% 0 2%;
+  width: 85rpx;
+  height: 85rpx;
+  /* border-radius: 100%; */
+}
+
+.specialex text,
+.specialin text,
+.commonitem text {
+  height: 100%;
+  padding-left:2%;
+}
+
+.name {
+  width: 20%;
+}
+
+.payway {
+  width: 15%;
+  line-height: 150rpx;
+  color: gray;
+  font-size: 25rpx;
+}
+
+/* .remarks {
+  width: 35%;
+} */
+
+.money {
+  width: 25%;
+  padding-right: 2%;
+  text-align: right;
+  /* padding-right: 4%; */
+}
+
+/* 记账按钮样式 */
+.add image {
+  position: fixed;
+  left: 600rpx;
+  bottom: 100rpx;
+  width: 60px;
+  height: 60px;
+  line-height: 20px;
+  text-align: center;
+  border: 2px solid #1296db;
+  border-radius: 100%;
+}

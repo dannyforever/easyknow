@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+}
+
+.navigator {
+  width: 100%;
+  height: 92px;
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+}
+
+.block-title {
+  width: 100%;
+  height: 50px;
+  background-color: #f2f8fd;
+}
+
+.title {
+  height: 42px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 5%;
+  font-size: 40rpx;
+  background-color: #f2f8fd;
+}
+
+.title image {
+  height: 55rpx;
+  width: 55rpx;
+  padding: 2%;
+}
+
+.title text {
+  padding: 1% 29%;
+}
+
+.menu-list {
+  margin-top: 92px;
+}
+
+.menu-list text{
+  margin-top: auto;
+}
+
+.list-addfixed {
+  width: 90%;
+  height: 93rpx;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  line-height: 95rpx;
+}
+
+.set-addfixed {
+  background-color: #f2f8fd;
+  width: 90%;
+  height: 93rpx;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  line-height: 95rpx;
+}

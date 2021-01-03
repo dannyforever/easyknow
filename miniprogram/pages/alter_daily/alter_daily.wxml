@@ -1,0 +1,121 @@
+<view class="container">
+  <!-- 0：导航栏 -->
+  <view class="navigator">
+    <view class="block-title"></view>
+    <view class="title">
+      <image src="/images/返回.png" bindtap="goback" />
+      <text>{{daily_type}}</text>
+    </view>
+  </view>
+  <view class="judge">
+    <view wx:if="{{isExpense}}">
+      <view>
+        <!-- 2：图标选择栏 -->
+        <view class="acc-icon">
+          <text class="icon-text">类型：</text>
+          <view class="acc-images">
+            <view class="images-form">
+              <view class="images-part" wx:for="{{7}}" data-id="{{index}}" bindtap="chooseExpensesIcon">
+                <image src="/images/add_daily/expenses/{{index}}.png" />
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 3：名称设置栏 -->
+        <view class="acc-name">
+          <text class="name-l">名称：</text>
+          <input class="name-r" value="{{dailyExpensesName}}" type="text" bindchange="bindExpensesNameChange" />
+        </view>
+        <!-- 4：日期设置栏 -->
+        <view class="acc-date">
+          <text class="data-l">日期：</text>
+          <view class="data-r">
+            <picker mode="date" bindchange="bindExpensesDateChange">
+              {{dailyExpensesTime}}
+            </picker>
+          </view>
+        </view>
+        <!-- 5：金额设置栏 -->
+        <view class="acc-money">
+          <text class="money-l">金额：</text>
+          <input class="money-r" value="{{dailyExpensesAmount}}" type="number" bindinput="bindExpensesAmountChange"
+            maxlength="6" />
+        </view>
+        <!-- 6：备注设置栏 -->
+        <view class="acc-remarks">
+          <text class="remarks-l">备注：</text>
+          <input class="remarks-r" value="{{dailyExpensesRemarks}}" type="text" placeholder="请输入备注"
+            bindinput="bindExpensesRemarksChange" />
+        </view>
+        <!-- 7：支付方式设置栏 -->
+        <view class="acc-payway">
+          <text class="payway-l">支付方式：</text>
+          <view class="payway-r">
+            <picker bindchange="bindExpensesWayChange" range="{{expensesWay}}">
+              {{expensesWay[dailyExpensesWay]}}
+            </picker>
+          </view>
+        </view>
+        <!-- 8：确认提交按钮 -->
+        <button bindtap="alterDaily_Expense">
+          <view>确认</view>
+        </button>
+      </view>
+    </view>
+    <view wx:if="{{!isExpense}}">
+      <view>
+        <!-- 2：图标选择栏 -->
+        <view class="acc-icon">
+          <text class="icon-text">类型：</text>
+          <view class="acc-images">
+            <view class="images-form">
+              <view class="images-part" wx:for="{{7}}" data-id="{{index}}" bindtap="chooseIncomesIcon">
+                <image src="/images/add_daily/incomes/{{index}}.png" />
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 3：名称设置栏 -->
+        <view class="acc-name">
+          <text class="name-l">名称：</text>
+          <input class="name-r" value="{{dailyIncomesName}}" type="text" bindchange="bindIncomesNameChange" />
+        </view>
+        <!-- 4：日期设置栏 -->
+        <view class="acc-date">
+          <text class="data-l">日期：</text>
+          <view class="data-r">
+            <picker mode="date" bindchange="bindIncomesDateChange">
+              {{dailyIncomesTime}}
+            </picker>
+          </view>
+        </view>
+        <!-- 5：金额设置栏 -->
+        <view class="acc-money">
+          <text class="money-l">金额：</text>
+          <input class="money-r" value="{{dailyIncomesAmount}}" type="number" bindinput="bindIncomesAmountChange"
+            maxlength="6" />
+        </view>
+        <!-- 6：备注设置栏 -->
+        <view class="acc-remarks">
+          <text class="remarks-l">备注：</text>
+          <input class="remarks-r" value="{{dailyIncomesRemarks}}" type="text" placeholder="请输入备注"
+            bindinput="bindIncomesRemarksChange" />
+        </view>
+        <!-- 7：支付方式设置栏 -->
+        <view class="acc-payway">
+          <text class="payway-l">支付方式：</text>
+          <view class="payway-r">
+            <picker bindchange="bindIncomesWayChange" range="{{incomesWay}}">
+              {{incomesWay[dailyIncomesWay]}}
+            </picker>
+          </view>
+        </view>
+        <!-- 8：确认提交按钮 -->
+        <button bindtap="alterDaily_Incomes">
+          <!-- <image class='subImg' src='/images/星标.png'></image> -->
+          <view>确认</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

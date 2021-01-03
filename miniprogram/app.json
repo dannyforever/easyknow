@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/fixed_index/fixed_index",
+    "pages/add_daily/add_daily",
+    "pages/add_fixed/add_fixed",
+    "pages/alter_daily/alter_daily",
+    "pages/alter_fixed/alter_fixed",
+    "pages/menu/menu",
+    "pages/login/login",
+    "pages/assets_limit/assets_limit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f2f8fd",
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

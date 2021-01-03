@@ -1,0 +1,24 @@
+<view class="container">
+  <!-- 0：导航栏 -->
+  <view class="navigator">
+    <view class="block-title"></view>
+    <view class="title">
+      <image src="/images/返回.png" bindtap="goback" />
+      <text>菜单</text>
+    </view>
+  </view>
+  <view class="menu-list">
+    <!-- 1：设定资产 -->
+    <view class="list-addfixed">
+      <text bindtap="bindAssets">资产管理</text>
+    </view>
+    <!-- 2：查看固定收支栏 -->
+    <view class="list-addfixed">
+      <text bindtap="bindFixed">固定收支列表</text>
+    </view>
+    <!-- 3：添加固定收支栏 -->
+    <view class="set-addfixed">
+      <text bindtap="bindAddFixed">添加固定收支</text>
+    </view>
+  </view>
+</view>
